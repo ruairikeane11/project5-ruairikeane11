@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-8s@j&_&q%kyh^%x_!q^t7nt!!o7e8#7&6d7uz4)%77lp2xpdpq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-ruairikeane-project5rua-aqdi5ciwrpx.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['8000-ruairikeane-project5rua-aqdi5ciwrpx.ws.codeinstitute-ide.net',
+'8000-ruairikeane-project5rua-6pqws3ym3zp.ws.codeinstitute-ide.net']
 
 
 # Application definition
@@ -52,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'green_couture.urls'
