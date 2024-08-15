@@ -3,8 +3,8 @@ html {
 }
 
 body {
-    background: url('/media/image5.jpeg') no-repeat center center fixed;
-    background-size: contain;
+    background: url('/media/hero-image4.jpeg') no-repeat center center fixed;
+    background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Lato';
