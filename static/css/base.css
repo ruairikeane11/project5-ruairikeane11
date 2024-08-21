@@ -30,6 +30,17 @@ body {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='green' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important; /* Force the icon color to green */
 }
 
+/* Product page */
+.header-container {
+    padding-top: 20px;
+}
+
+.card-img-top {
+    height: 320px;
+    width: 100%;
+    object-fit: contain;
+    object-position: bottom;
+}
 
 /* from Bulma */
 .icon {
@@ -83,8 +94,25 @@ body {
     top: 0;
     left: 0;
     position:fixed;
-    background: lightgray;
+    background: lightgrey;
     z-index: -1;
+}
+
+a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link {
+    cursor: pointer;
 }
 
 /* -------------------------------- Media Queries */
@@ -107,14 +135,14 @@ body {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 80px;
     }
 }
 
 /* Pad the top a it when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 116px;
+        padding-top: 40px;
     }
 
     body {
