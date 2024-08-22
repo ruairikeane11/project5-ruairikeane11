@@ -18,6 +18,10 @@ class Category(models.Model):
 
 class Product(models.Model):
 
+    BAG_SIZES = [
+       ('OneSize', 'One Size' ),
+    ]
+
     CLOTHING_SIZES = [
         ('XS', 'Extra Small'),
         ('S', 'Small'),
@@ -37,7 +41,7 @@ class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
-    size = models.CharField(max_length=4, choices= CLOTHING_SIZES + SHOE_SIZES, null=True, blank=True)
+    size = models.CharField(max_length=8, choices= CLOTHING_SIZES + SHOE_SIZES + BAG_SIZES, null=True, blank=True)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
