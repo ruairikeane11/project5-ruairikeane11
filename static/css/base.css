@@ -31,6 +31,12 @@ body {
 }
 
 /* Product page */
+.size-form-group,
+.quantity-form-group {
+    width: 70px;
+}
+
+
 .header-container {
     padding-top: 20px;
 }
@@ -127,6 +133,8 @@ a.category-badge > span.badge:hover {
 .btt-link {
     cursor: pointer;
 }
+
+
 
 /* -------------------------------- Media Queries */
 

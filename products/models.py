@@ -19,7 +19,7 @@ class Category(models.Model):
 class Product(models.Model):
 
     BAG_SIZES = [
-       ('OneSize', 'One Size' ),
+       ('One Size', 'One Size' ),
     ]
 
     CLOTHING_SIZES = [
