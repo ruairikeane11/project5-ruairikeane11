@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'home',
     'products',
     'bag',
+    'checkout'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
