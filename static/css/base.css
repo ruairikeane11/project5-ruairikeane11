@@ -2,10 +2,13 @@ html {
     height: 100%;
 }
 
+nav {
+    font-family: 'Barlow Condensed';
+}
+
 body {
     background: url('/media/hero-image1.jpeg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
     color: #555;
     font-family: 'Lato';
 }
