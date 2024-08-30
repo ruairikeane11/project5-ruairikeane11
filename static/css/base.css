@@ -42,7 +42,7 @@ body {
 }
 
 .card-img-top {
-    height: 320px;
+    height: 315px;
     width: 100%;
     object-fit: contain;
     object-position: bottom;
