@@ -2,7 +2,7 @@ html {
     height: 100%;
 }
 
-nav {
+header {
     font-family: 'Barlow Condensed';
 }
 
@@ -12,6 +12,7 @@ body {
     color: #555;
     font-family: 'Lato';
 }
+
 
 /* Icons on mobile */
 
@@ -34,21 +35,41 @@ body {
 }
 
 /* Product page */
-.size-form-group,
-.quantity-form-group {
+
+
+
+/* Product Detail Page */
+
+.size-form-group, .quantity-form-group {
     width: 70px;
 }
 
-
-.header-container {
-    padding-top: 20px;
+.description-form-group {
+    width: 250px;
 }
 
-.card-img-top {
-    height: 315px;
-    width: 100%;
-    object-fit: contain;
-    object-position: bottom;
+.product-detail {
+    font-size : 1.25rem;
+}
+
+.product-price {
+    font-size: 1.5rem;
+}
+
+.product-title {
+    font-size: 2rem; /* Larger font size for the product title */
+    font-weight: bold;
+}
+
+
+.btn-lg {
+    font-size: 1.5rem;
+    padding: 1rem 1rem;
+    width: 150px;
+}
+
+.btn-outline-black, .btn-black {
+    border-width: 2px;
 }
 
 /* from Bulma */
@@ -235,7 +256,7 @@ a.category-badge > span.badge:hover {
 /* Pad the top a it when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 40px;
+        padding-top: 20px;
     }
 
     body {

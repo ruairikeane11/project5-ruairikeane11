@@ -26,32 +26,36 @@
                     {% endif %}
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-6">
                 <div class="product-details-container mb-5 mt-md-5">
-                    <p class="mb-0">{{ product.name }}</p>
-                    <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                    <p class="mb-4 product-title">{{ product.name }}</p>
+                    <p class="lead mb-3 text-left font-weight-bold product-price">${{ product.price }}</p>
                     {% if product.rating %}
-                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                        <small class="text-muted"><i class="fas fa-star mt-1"></i>{{ product.rating }} / 5</small>
                     {% else %}
-                        <small class="text-muted">No Rating</small>
+                        <small class="text-muted mt-1">No Rating</small>
                     {% endif %}
-                    <p class="mt-3"><strong>Size: </strong></p>
-                    <div class="size-form-group">
-                        <input class="form-control" type="text" value="{{ product.size }}" readonly>
-                    </div>
+
                     
-                    <p class="mt-3">{{ product.description }}</p>
+                    <div class="quantity-form-group mt-3">
+                        <label for="quantity" class="font-weight-bold">Quantity:</label>
+                        <input id="quantity" class="form-control" type="text" value="1" readonly>
+                    </div>
+
+                    <div class="size-form-group">
+                        <label for="size" class="font-weight-bold">Size:</label>
+                        <input id="size" class="form-control" type="text" value="{{ product.size }}" readonly>
+                    </div>
+
+                    <div class="description-form-group">
+                        <label for="description" class="font-weight-bold">Description:</label>
+                        <input id="description" class="form-control" type="text" value="{{ product.description }}" readonly>
+                    </div>
 
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
-                            <div class="col-12">
-                                <p class="mt-3"><strong>Quantity:</strong></p>
-                                <div class="quantity-form-group">
-                                    <div class="input-group">
-                                        <input class="form-control qty_input" type="number" name="quantity" value="1" readonly>
-                                    </div>
-                                </div>                         
+                                                   
                                 <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
@@ -63,6 +67,7 @@
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
                     </form>
+                    
                 </div>
             </div>
         </div>
