@@ -30,7 +30,9 @@ DEBUG = True
 ALLOWED_HOSTS = ['8000-ruairikeane-project5rua-6pqws3ym3zp.ws.codeinstitute-ide.net',
 'https://8000-ruairikeane-project5rua-6pqws3ym3zp.ws.codeinstitute-ide.net',
 '8000-ruairikeane-project5rua-2p707f9gxsh.ws.codeinstitute-ide.net',
-'https://8000-ruairikeane-project5rua-2p707f9gxsh.ws.codeinstitute-ide.net',]
+'https://8000-ruairikeane-project5rua-2p707f9gxsh.ws.codeinstitute-ide.net',
+'ruairikeane11-green-couture11.herokuapp.com', 'localhost'
+]
 
 
 # Application definition
