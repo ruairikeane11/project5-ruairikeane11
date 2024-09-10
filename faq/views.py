@@ -5,4 +5,4 @@ def faq(request):
     """ A view to render the faq page """
 
     
-    return render(request, 'templates/faq.html')
+    return render(request, 'faq.html')
