@@ -13,13 +13,24 @@ body {
     font-family: 'Barlow Condensed';
 }
 
+/* nav */
+.dropdown-item {
+    color: #15e715;
+}
 
 /* Icons on mobile */
+.nav-item {
+    color: #15e715  !important;
+}
+
+.text-success, .btn-success {
+    color: #15e715  !important;
+}
 
 .nav-link, .fa-search,
 .nav-link, .fa-user,
 .nav-link, .fa-shopping-bag {
-    color: #15e715;
+    color: #15e715  !important;
 }
 
 .nav-link, p {
@@ -32,7 +43,7 @@ body {
 }
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='green' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important; /* Force the icon color to green */
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#15e715' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important; /* Force the icon color to green */
 }
 
 /* Product page */
