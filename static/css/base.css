@@ -19,16 +19,16 @@ body {
 .nav-link, .fa-search,
 .nav-link, .fa-user,
 .nav-link, .fa-shopping-bag {
-    color: green;
+    color: #15e715;
 }
 
 .nav-link, p {
-    color: green;
+    color: #15e715;
 }
 
 .navbar-toggler {
-    color: green;
-    border-color:green !important; /* Change the border color to green */
+    color: #15e715;
+    border-color:#15e715 !important; /* Change the border color to green */
 }
 
 .navbar-toggler-icon {

@@ -1,8 +1,9 @@
 from django.shortcuts import render
+from .models import Faq
+from .forms import FaqForm
 
 # Create your views here.
 def faq(request):
-    """ A view to render the faq page """
-
-    
-    return render(request, 'faq.html')
+    """View to display all FAQs"""
+    faqs = Faq.objects.all()
+    return render(request, 'faq/faq.html', {'faqs': faqs})
