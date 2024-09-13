@@ -45,10 +45,9 @@
             <!-- Left Side: Toggle Button for Search Bar -->
             <div class="col-4 text-left">
                 <button id="search-toggle" class="btn search-icon-box">
-                    <i class="fas fa-search"></i>
-                    
+                    <i class="fas fa-search"></i>                 
                 </button>
-                <div id="search-bar" class="d-none mt-2">
+                <div id="search-bar" class="d-none mt-2 position-absolute">
                     <form method="GET" action="{% url 'products' %}">
                         <div class="input-group w-100">
                             <input class="form-control border border-success rounded-0" type="text" name="q" placeholder="Search our site">
@@ -146,7 +145,7 @@
     {% endblock %}
 
     {% block footer %}
-    <footer class="footer bg-dark text-light text-center py-1 mt-auto">
+    <footer class="footer bg-dark text-light text-center py-1 mt-4">
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
@@ -190,7 +189,13 @@
             });
         });
         $('.toast').toast('show');
+        $(document).ready(function() {
+    $('#search-toggle').click(function() {
+        $('#search-bar').toggleClass('show');
+    });
+});
     </script>
+
     {% endblock %}
 
 </body>

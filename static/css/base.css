@@ -20,11 +20,20 @@ body {
     background: transparent; /* Transparent background */
 }
 
-#search-bar .form-control {
-    background-color: white; /* Light gray color */
-    color: #555; /* Text color for visibility */
+/* search bar conatiner*/
+.search-bar {
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    z-index: 9999;
+    width: 125px;
+    max-width: 100%;
 }
 
+/* Style when the search bar is visible */
+#search-bar.show {
+    display: block;
+}
 
 .text-success {
     color: #15e715  !important;
@@ -64,6 +73,12 @@ a {
 
 .navbar-toggler-icon {
     color: #15e715  !important;
+}
+
+/* Contact Page */
+
+#contact-conatiner {
+    margin-bottom: 100px;
 }
 
 /* Product page */
