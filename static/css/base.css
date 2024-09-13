@@ -14,9 +14,14 @@ body {
 }
 
 /*  Base */
+.search-icon-box {
+    border: 2px solid #15e715  ; /* Green border for the search button */
+    padding: 8px; /* Space around the icon */
+    background: transparent; /* Transparent background */
+}
 
 #search-bar .form-control {
-    background-color: lightgray; /* Light gray color */
+    background-color: white; /* Light gray color */
     color: #555; /* Text color for visibility */
 }
 
@@ -27,13 +32,6 @@ body {
 
 .fa-search {
     color: #15e715  !important;
-}
-
-.search-icon-box {
-    border: 2px solid #15e715  ; /* Green border for the search button */
-    border-radius: 50%; /* Circular box */
-    padding: 8px; /* Space around the icon */
-    background: transparent; /* Transparent background */
 }
 
 .btn-search {
