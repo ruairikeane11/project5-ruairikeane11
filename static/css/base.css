@@ -42,6 +42,10 @@ body {
 
 /* Icons on mobile */
 
+a {
+    color: #15e715 !important;
+}
+
 .nav-link, .fa-search,
 .nav-link, .fa-user,
 .nav-link, .fa-shopping-bag {

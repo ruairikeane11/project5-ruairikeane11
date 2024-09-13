@@ -38,7 +38,7 @@
 
     <title>Green Couture {% block extra_title %}{% endblock %}</title>
   </head>
-  <body>
+  <body class="d-flex flex-column min-vh-100">
     <header class="container-fluid">
         <!-- Top navigation bar -->
         <div id="topnav" class="row bg-dark pt-lg-2 d-none d-lg-flex align-items-center justify-content-center">
@@ -144,6 +144,41 @@
 
     {% block content %}
     {% endblock %}
+
+    <footer class="footer bg-dark text-light text-center py-1 mt-auto">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <ul class="list-inline text-center mt-3">
+                        <li class="list-inline-item sm-icon">
+                            <a href="https://www.twitter.com/" aria-label="Twitter">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item sm-icon">
+                            <a href="https://www.facebook.com/" aria-label="Facebook">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item sm-icon">
+                            <a href="https://www.youtube.com/" aria-label="Youtube">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     {% block postloadjs %}
     <script type="text/javascript">
