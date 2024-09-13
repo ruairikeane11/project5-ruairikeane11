@@ -13,19 +13,34 @@ body {
     font-family: 'Barlow Condensed';
 }
 
-/* nav */
-.dropdown-item {
-    color: #15e715;
+/*  Base */
+
+#search-bar .form-control {
+    background-color: lightgray; /* Light gray color */
+    color: #555; /* Text color for visibility */
+}
+
+
+.text-success {
+    color: #15e715  !important;
+}
+
+.fa-search {
+    color: #15e715  !important;
+}
+
+.search-icon-box {
+    border: 2px solid #15e715  ; /* Green border for the search button */
+    border-radius: 50%; /* Circular box */
+    padding: 8px; /* Space around the icon */
+    background: transparent; /* Transparent background */
+}
+
+.btn-search {
+    border: #15e715  !important; 
 }
 
 /* Icons on mobile */
-.nav-item {
-    color: #15e715  !important;
-}
-
-.text-success, .btn-success {
-    color: #15e715  !important;
-}
 
 .nav-link, .fa-search,
 .nav-link, .fa-user,
@@ -37,13 +52,16 @@ body {
     color: #15e715;
 }
 
+.navbar-toggler-mb {
+    display: block;
+}
+
 .navbar-toggler {
-    color: #15e715;
-    border-color:#15e715 !important; /* Change the border color to green */
+    color: #15e715 !important;
 }
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#15e715' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important; /* Force the icon color to green */
+    color: #15e715  !important;
 }
 
 /* Product page */

@@ -44,15 +44,16 @@
         <div id="topnav" class="row bg-dark pt-lg-2 d-none d-lg-flex align-items-center justify-content-center">
             <!-- Left Side: Toggle Button for Search Bar -->
             <div class="col-4 text-left">
-                <button id="search-toggle" class="btn btn-success">
+                <button id="search-toggle" class="btn search-icon-box">
                     <i class="fas fa-search"></i>
+                    
                 </button>
                 <div id="search-bar" class="d-none mt-2">
                     <form method="GET" action="{% url 'products' %}">
                         <div class="input-group w-100">
                             <input class="form-control border border-success rounded-0" type="text" name="q" placeholder="Search our site">
                             <div class="input-group-append">
-                                <button class="btn btn-success border border-success rounded-0" type="submit">
+                                <button class="btn-search border border-success rounded-0" type="submit">
                                     <i class="fas fa-search"></i>
                                 </button>
                             </div>
@@ -84,6 +85,7 @@
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                                 <a href="{% url 'contact' %}" class="dropdown-item">Contact Us</a>
                                 <a href="{% url 'faq' %}" class="dropdown-item">FAQ Section</a>
+                                <a href="{% url 'subscribe' %}" class="dropdown-item">Newsletter</a>
                             {% else %}
                                 <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
                                 <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
