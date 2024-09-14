@@ -5,7 +5,7 @@ from .forms import NewsLetterForm
 # Create your views here.
 def subscribe(request):
     if request.method == 'POST':
-        Form = NewsLetterForm(REQUEST.post)
+        form = NewsLetterForm(request.POST)
         if form.is_valid():
             form.save()  # Save the subscriber's email to the database
             messages.success(request, 'Thank you for subscribing to our newsletter!')

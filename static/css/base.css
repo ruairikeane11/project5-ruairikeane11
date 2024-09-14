@@ -14,21 +14,17 @@ body {
 }
 
 /*  Base */
+
+.newsletter-banner {
+    color: #15e715;
+}
+
 .search-icon-box {
     border: 2px solid #15e715  ; /* Green border for the search button */
     padding: 8px; /* Space around the icon */
     background: transparent; /* Transparent background */
 }
 
-/* search bar conatiner*/
-.search-bar {
-    top: 100%;
-    left: 0;
-    background-color: #fff;
-    z-index: 9999;
-    width: 125px;
-    max-width: 100%;
-}
 
 /* Style when the search bar is visible */
 #search-bar.show {
