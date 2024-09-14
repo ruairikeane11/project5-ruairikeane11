@@ -76,7 +76,7 @@
                             <p class="my-0">My Account</p>
                             
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                        <div class="dropdown-menu bg-dark border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                     <a href="" class="dropdown-item">Product Management</a>
@@ -85,7 +85,6 @@
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                                 <a href="{% url 'contact' %}" class="dropdown-item">Contact Us</a>
                                 <a href="{% url 'faq' %}" class="dropdown-item">FAQ Section</a>
-                                <a href="{% url 'subscribe' %}" class="dropdown-item">Newsletter</a>
                             {% else %}
                                 <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
                                 <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
@@ -154,7 +153,7 @@
     {% block content %}
     {% endblock %}
     {% block footer %}
-    <footer class="footer bg-dark text-light text-center py-1 mt-auto mt-4">
+    <footer class="footer bg-dark text-light text-center py-1  mt-4">
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
@@ -162,24 +161,24 @@
                         <li class="list-inline-item sm-icon">
                             <a href="https://www.twitter.com/" aria-label="Twitter">
                                 <span class="fa-stack fa-lg">
-                                    <i class="fas fa-circle fa-stack-2x"></i>
-                                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                                    <i class="fas fa-circle fa-stack-2x text-dark"></i>
+                                    <i class="fab fa-twitter fa-stack-1x text-success"></i>
                                 </span>
                             </a>
                         </li>
                         <li class="list-inline-item sm-icon">
                             <a href="https://www.facebook.com/" aria-label="Facebook">
                                 <span class="fa-stack fa-lg">
-                                    <i class="fas fa-circle fa-stack-2x"></i>
-                                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                    <i class="fas fa-circle fa-stack-2x text-dark"></i>
+                                    <i class="fab fa-facebook-f fa-stack-1x text-success"></i>
                                 </span>
                             </a>
                         </li>
                         <li class="list-inline-item sm-icon">
                             <a href="https://www.youtube.com/" aria-label="Youtube">
                                 <span class="fa-stack fa-lg">
-                                    <i class="fas fa-circle fa-stack-2x"></i>
-                                    <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+                                    <i class="fas fa-circle fa-stack-2x text-dark"></i>
+                                    <i class="fab fa-youtube fa-stack-1x text-success"></i>
                                 </span>
                             </a>
                         </li>

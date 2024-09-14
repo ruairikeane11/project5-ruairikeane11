@@ -2,8 +2,8 @@
 {% load static %}
 {% block content %}
 
-<div class="container" id="faq-container">
-    <div class="card bg-dark text-light mt-4 p-4">
+<div class="container d-flex justify-content-center" id="faq-container">
+    <div class="card bg-dark text-light mt-4 p-4 text-center">
         <h1>Frequently Asked Questions</h1>
         <p>Find answers to common questions below.</p>
         <div class="row">
@@ -11,7 +11,7 @@
                 <ul class="list-unstyled">
                     {% for faq in faqs %}
                     <li class="mb-4">
-                        <h4 class="text-success">{{ faq.question }}</h4>
+                        <h4 class="text-white">{{ faq.question }}</h4>
                         <p>{{ faq.answer }}</p>
                     </li>
                     {% empty %}

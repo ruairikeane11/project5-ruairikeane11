@@ -15,12 +15,18 @@ body {
 
 /*  Base */
 
-.newsletter-banner {
-    color: #15e715;
+/* Dropdown menu */
+.navbar-light .navbar-toggler {
+    color: #15e715 !important;
+}
+
+
+.bg-success {
+    background-color: #15e715 !important;
 }
 
 .search-icon-box {
-    border: 2px solid #15e715  ; /* Green border for the search button */
+    border: 2px solid #15e715; /* Green border for the search button */
     padding: 8px; /* Space around the icon */
     background: transparent; /* Transparent background */
 }
@@ -82,9 +88,13 @@ a {
 
 
 /* Product Detail Page */
+.category-form-group {
+    width: 85px;
+}
 
-.size-form-group, .quantity-form-group {
-    width: 70px;
+
+.size-form-group{
+    width: 50px;
 }
 
 .description-form-group {
