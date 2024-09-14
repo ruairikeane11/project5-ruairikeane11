@@ -16,7 +16,7 @@ body {
 }
 
 .bg-dark {
-    background-color: #595959 !important;
+    background-color: black !important;
 }
 
 
@@ -46,6 +46,10 @@ body {
 /* Style when the search bar is visible */
 #search-bar.show {
     display: block;
+}
+
+.dropdown-item {
+    color: #15e715 ;
 }
 
 .text-success {
