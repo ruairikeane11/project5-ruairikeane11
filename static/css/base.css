@@ -6,6 +6,8 @@ header {
     font-family: 'Barlow Condensed';
 }
 
+
+
 body {
     background: url('/media/heroimage.jpeg') no-repeat center center fixed;
     background-size: cover;
@@ -13,7 +15,16 @@ body {
     font-family: 'Barlow Condensed';
 }
 
+.bg-dark {
+    background-color: #595959 !important;
+}
+
+
 /*  Base */
+
+.home-text {
+    margin-top: 50px;
+}
 
 /* Dropdown menu */
 .navbar-light .navbar-toggler {
@@ -51,7 +62,7 @@ body {
 
 /* Icons on mobile */
 
-a {
+.mobile-search-icon {
     color: #15e715 !important;
 }
 
