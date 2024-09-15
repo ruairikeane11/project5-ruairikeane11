@@ -11,7 +11,7 @@ header {
 body {
     background: url('/media/heroimage.jpeg') no-repeat center center fixed;
     background-size: cover;
-    color: #555;
+    color: hsla(0, 5%, 29%, 0.527);
     font-family: 'Barlow Condensed';
 }
 
