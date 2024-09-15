@@ -16,11 +16,11 @@ body {
 }
 
 .bg-dark {
-    background-color: #3c3c3c !important;
+    background-color: #181818 !important;
 }
 
 .fa-circle {
-    color: #3c3c3c !important;
+    color: 	#181818 !important;
 }
 
 
@@ -32,16 +32,16 @@ body {
 
 /* Dropdown menu */
 .navbar-light .navbar-toggler {
-    color: #15e715 !important;
+    color: #50C878 !important;
 }
 
 
 .bg-success {
-    background-color: #15e715 !important;
+    background-color: #4ff14f !important;
 }
 
 .search-icon-box {
-    border: 2px solid #15e715; /* Green border for the search button */
+    border: 2px solid #4ff14f; /* Green border for the search button */
     padding: 8px; /* Space around the icon */
     background: transparent; /* Transparent background */
 }
@@ -53,19 +53,19 @@ body {
 }
 
 .dropdown-item {
-    color: #15e715 ;
+    color: #4ff14f;
 }
 
 .text-success {
-    color: #15e715  !important;
+    color: #4ff14f  !important;
 }
 
 .fa-search {
-    color: #15e715  !important;
+    color: #4ff14f  !important;
 }
 
 .btn-search {
-    border: #15e715  !important; 
+    border: #4ff14f !important; 
 }
 
 /* Icons on mobile */
@@ -77,11 +77,11 @@ body {
 .nav-link, .fa-search,
 .nav-link, .fa-user,
 .nav-link, .fa-shopping-bag {
-    color: #15e715  !important;
+    color: #4ff14f  !important;
 }
 
 .nav-link, p {
-    color: #15e715;
+    color: #4ff14f;
 }
 
 .navbar-toggler-mb {
@@ -89,11 +89,11 @@ body {
 }
 
 .navbar-toggler {
-    color: #15e715 !important;
+    color: #4ff14f !important;
 }
 
 .navbar-toggler-icon {
-    color: #15e715  !important;
+    color: #4ff14f !important;
 }
 
 /* Contact Page */
@@ -134,10 +134,8 @@ body {
 }
 
 
-.btn-lg {
-    font-size: 1.5rem;
-    padding: 1rem 1rem;
-    width: 150px;
+.btn-success {
+    color: #4ff14f;
 }
 
 .btn-outline-black, .btn-black {

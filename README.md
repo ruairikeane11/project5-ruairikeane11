@@ -1,110 +1,65 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Green Couture Website
 
-Welcome Ruairi Keane,
+Green Couture is an ecommerce platform specializing in the sale of high-end luxury goods with a focus on sustainability. The store offers pre-owned designer fashion items, including clothing, accessories, and footwear from renowned luxury brands. Green Couture emphasizes eco-consciousness by promoting circular fashion, allowing customers to purchase gently used, high-quality luxury items at more accessible prices while contributing to reducing waste and extending the life cycle of premium products.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Table Of Contents 
+1. [User Experience](#user-experience)
+2. [Features](#features)
+3. [Technologies Used](#technologies-used)
+4. [Testing](#testing)
+5. [Deployment](#deployment)
+6. [Credits](#credits)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
 
-## Gitpod Reminders
+# User Experience
+## User goals are:
+ - View products.
+ - Create account with my details.
+ - Purchase products with credit card.
+ - Sign up to newletter to be informed about latest offers.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## This reaches the user goals by:
+ - Providing a product page.
+ - Allowing the user to create a profile.
+ - Having a payment system.
+ - Allowing user to enter email to receieve newsletter
 
-`python3 -m http.server`
+## User stories:
+ - As a site user, I want to browse and filter through pre-owned luxury items so I can easily find the products that 
+    meet my preferences.
+ - As a site user, I want to be able to create an account, so that my details can be saved.
+ - As a site user, I want to be able to enter my credit card details, so that I can make a purchase.
+ - As a site user, I want to receieve emails, so I am up to date with all of the latest offers.
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+### Colors 
+- The website uses 3 main colours. The footer and the nav are both dark grey with green icons and buttons. 
+The main body of each page is a lightgray to contrast with the darker shade in the nav and footer. I chose green as this colour represents sustainablity, which is a main priority at Green Couture.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A blue button should appear to click: _Make Public_,
+### Font 
+- I decided to use the 'Barlow Condensed' font from [GoogleFonts](https://fonts.google.com/) throughout all pages of the website, because it is plain while also being captivating for the viewer. 
 
-Another blue button should appear to click: _Open Browser_.
+### Icons 
+- The icons are found in both the nav and footer, located at the bottom of every page. They are taken from [Fontawesome](https://fontawesome.com/), and are all utilised as classes in the i tag, therefore easily targeted and customised. Once an icon clicked, the link will bring you to the desired website.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+# Features
+### Navbar
+- The website incorpates a responsive navbar depending on the screen size in use. The navbar features a dropdown menu with links to the profile page, a search bar and also a link to your basket. When viewing the site on a mobile, a burger icon is on the top left hand corner, and the other buttons are placed on the right hand side.
 
-To log into the Heroku toolbelt CLI:
+- If the site user clicks on the search icon, and search bar will toggle beneath so the user can make search queries to find a desired item. 
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Footer 
+- At the bottom of each page there is a footer. It is styled in the same color as the navbar the keep consistency within the site(#fc9003). Here, you can find links the social media sites like Youtube, Facebook and Twitter.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Home Page
+- The home page of the site showcases an image of some items in stock on the website. The main heading reads 'Pre-loved luxury goods' and beneaht that, lies a button that links the user to the product page.
 
-------
+### Product Page 
+- The product page is where users can browse and find their desired products. At the top of the page, the amount of results can be found along with a sort by box, which allowes the user to arrange the order of products depending on price, rating etc. 
 
-## Release History
+### Product Detail Page
+- Once a user clicks on a product, they are brought to the product detail page. This page gives a full breakdown and description of the product. Once a user clicks the 'Add To Bag' button, a pop up will be displayed on the top right corner of the page, notifying the user that the product has been added to their bag. Once the user confirms this by clicking the button they will be brought to the checkout page.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 20 2023:** Update Python version to 3.9.17.
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+### Checkout Page
+- The checkout page is populated with emtpy fields. The user can then enter their full name and email, followed by their delivery address and credit card details. Once the user is ready they can click the complete order button, which will display a loading overlay, followed by success message notifying the user their purchase has been successfull.
