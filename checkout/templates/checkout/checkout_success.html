@@ -19,6 +19,8 @@
             </div>
         </div>
 
+
+        {% if user.is_authenticated %}
         <div class="row">
             <div class="col-12 col-lg-7">
                 <div class="order-confirmation-wrapper p-2 border">
@@ -184,6 +186,7 @@
                 </div>
             </div>
         </div>
+        {% else %}
         <div class="row">
 			<div class="col-12 col-lg-7 text-right">
                 {% if from_profile %}
