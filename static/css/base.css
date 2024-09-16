@@ -57,7 +57,7 @@ body {
 }
 
 .text-success {
-    color: #30ee30 !important;
+    color: #ffffff !important;
 }
 
 .fa-search {
@@ -71,13 +71,13 @@ body {
 /* Icons on mobile */
 
 .mobile-search-icon {
-    color: #30ee30 !important;
+    color: #ffffff !important;
 }
 
 .nav-link, .fa-search,
 .nav-link, .fa-user,
 .nav-link, .fa-shopping-bag {
-    color: #2ef72e  !important;
+    color: #ffffff !important;
 }
 
 .nav-link, p {

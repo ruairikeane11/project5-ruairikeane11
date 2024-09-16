@@ -63,3 +63,51 @@ The main body of each page is a lightgray to contrast with the darker shade in t
 
 ### Checkout Page
 - The checkout page is populated with emtpy fields. The user can then enter their full name and email, followed by their delivery address and credit card details. Once the user is ready they can click the complete order button, which will display a loading overlay, followed by success message notifying the user their purchase has been successfull.
+
+# Technologies Used 
+### HTML 
+- HTML was used to write all of the content on each page.
+
+### CSS 
+- I used a CSS to style each page. You can all of the styling in the style.css file.
+
+### Python 
+- I used Python classes for all of the mdodels used. The FAQ section, newsletter signup, and contact form are all custom made. The product and order model were both taken from the walkthrough and modified. All of the views, forms, and url files are all written in Python code.
+
+
+### Bootstrap
+- I used Bootstrap styling to simply design some elements, for example, the layout of the home page. Any further, more specific styling was written in the style.css file.
+
+### Django 
+- I used Django, a python based framework to complete this project. Django provides a structure that makes the development process simple and clean.
+
+## Librares 
+
+### Google Fonts
+- I used [GoogleFonts](https://fonts.google.com/) to import the 'Chivo Monu' font. 
+### Fontawesome
+- I used [Fontawesome](https://fontawesome.com/) for the font styling throughout.
+
+## Platforms
+
+### Github
+- I used Github to store my code locally.
+
+#### User Stories
+- I used Github user stories to make sure that I was developing the site in the right direction. I added labels to all of my user stories. Each user story was either labelled with Must Have, Should Have, Could Have and Won't Have.
+- I also created my own custom board in the Project section in order to keep track of my progress. The board includes three section. To do, In Progress, and Done. I would regualrly make changes to the board to remind myself of other features that needed to be created.
+
+### Gitpod
+- Gitpod was used as my IDE for the project development.
+
+# Testing
+
+### Validation 
+- HTML has been validated with [W3C HTML5 Validator](https://validator.w3.org/). All pages were tested until the message below was visible.
+
+- CSS has been validated with [W3C CSS Validator](https://jigsaw.w3.org/css-validator/). These were the results.
+
+
+- Python has been validated with until no errors were found.[CI PYTHON LINTER](https://pep8ci.herokuapp.com/).
+
+
