@@ -6,13 +6,24 @@ header {
     font-family: 'Barlow Condensed';
 }
 
-
-
 body {
     background: url('/media/heroimage.jpeg') no-repeat center center fixed;
     background-size: cover;
     color: hsla(0, 5%, 29%, 0.527);
     font-family: 'Barlow Condensed';
+}
+
+/* Index page */
+.text-box {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+
+#title-text {
+    color: rgb(3, 170, 3);
 }
 
 .bg-dark {

@@ -4,11 +4,12 @@ Green Couture is an ecommerce platform specializing in the sale of high-end luxu
 
 ## Table Of Contents 
 1. [User Experience](#user-experience)
-2. [Features](#features)
-3. [Technologies Used](#technologies-used)
-4. [Testing](#testing)
-5. [Deployment](#deployment)
-6. [Credits](#credits)
+2. [Wireframes] (#wireframes)
+3. [Features](#features)
+4. [Technologies Used](#technologies-used)
+5. [Testing](#testing)
+6. [Deployment](#deployment)
+7. [Credits](#credits)
 
 
 # User Experience
@@ -107,7 +108,54 @@ The main body of each page is a lightgray to contrast with the darker shade in t
 
 - CSS has been validated with [W3C CSS Validator](https://jigsaw.w3.org/css-validator/). These were the results.
 
-
 - Python has been validated with until no errors were found.[CI PYTHON LINTER](https://pep8ci.herokuapp.com/).
 
+### Manual Testing 
+- I used Devtools for the development of this website. I often would test different styles in the devtools environment, before writing them in my style.css file. 
+- I used the 'Lighthouse' feature to ensure my project scored high in accessibilty on each page.
+
+#### Desktop Testing
+- The site was developed on a laptop and the majority of the testing was done on Google Chrome.
+- The site was tested on other browsers.
+- The site was sent to friends and family with different laptop sizes to get different looks.
+
+### Mobile Testing
+- I sent the site to myself and viewed it on a Iphone XR.
+- I used Devtools to view the site on many different mobile screen sizes
+- The site was also sent to numerous different mobile users to get feedback about its responsiveness.
+
+### Automated Testing
+- I decided to not use automatic testing in the production of this project. As you can see, there is nothing in the test.py files. Automatic testing can be more effective than manual testing in the long run, as you can test multiple test cases and find bugs that a human might miss during manual testing. As this website was relatively basic, I could find all of the bugs through manual testing and fix them easily.
+
+# Deployment 
+## Local Instructions
+- Copy the repo here (https://ruairikeane-project4rua-15b816h0t6u.ws-eu114.gitpod.io/).
+- Open up an IDE and paste the copied repo.
+- Once opened, install all of the needed dependencies. (pip install -r requirements.txt)
+- Create an .env file and add necessary environment variables like 'SECRET_KEY' and 'DATABASE_URL'.
+- Run command (python manage.py migrate).
+- Create a superuser (python manage.py createsuperuser).
+- Run the server with (python3 manage.py runserver).
+- The website should now be visible.
+
+## Heroku 
+- This project was deployed early on in the development stage with Heroku.
+- For deployment, 'DEBUG' was set to 'False'.
+- 'ALLOWED_HOSTS' was updated.
+- A 'Procfile' was created for Heroku deploy.
+- A 'requirements.txt' was added with all of the dependecies listed.
+- Two config vars were added. The 'DATABASE_URL' and a 'SECRET_KEY'.
+- A python buildpack was also added in the settings tab.
+
+
+# Credits
+
+## Boutique Ado Walkthrough Project
+- I found the 'Boutique Ado'  walkthrough project extemely helpful. The site incorporated many similar features and systmens to my own project and took alot of inspiration of the neat aesthetics of an e-commerce fashion store. 
+
+## Mentor Tutor
+- I had three meeting with my Mentor Tutor throughout this process. After each session I had a clear idea of what was needed in order to develop the website further.
+
+## Contact 
+- Contact @ruairi.rk@icloud.com
 
