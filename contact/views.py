@@ -12,7 +12,9 @@ def contact_us(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             contact = form.save()
-            messages.success(request, "Your request has been submitted successfully!", extra_tags='info')
+            messages.success(request,
+                             "Your request has been submitted successfully!",
+                             extra_tags='info')
     else:
         form = ContactForm()
 
@@ -24,4 +26,3 @@ def contact_us(request):
         {"form": form,
          'submitted_contacts': submitted_contacts},
     )
-

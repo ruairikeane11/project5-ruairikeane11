@@ -30,12 +30,14 @@ def profile(request):
 
     return render(request, template, context)
 
+
 @login_required
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
     if order.user_profile.user != request.user:
-        messages.error(request, "You do not have permission to view this order.")
+        messages.error(request,
+                       "You do not have permission to view this order.")
         return redirect('profile')
 
     messages.info(request, (
@@ -50,5 +52,3 @@ def order_history(request, order_number):
     }
 
     return render(request, template, context)
-
-
