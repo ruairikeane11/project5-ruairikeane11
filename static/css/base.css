@@ -4,8 +4,6 @@ html {
 
 header {
     font-family: 'Barlow Condensed';
-    width: 100%;
-    background-color: #101010;
 }
 
 body {
@@ -13,6 +11,14 @@ body {
     background-size: cover;
     color: hsla(0, 5%, 29%, 0.527);
     font-family: 'Barlow Condensed';
+}
+
+.container-fluid {
+    width: 100%;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 /* Index page */
@@ -49,12 +55,6 @@ body {
 .navbar {
     width: 100%;
 }
-
-#topnav {
-    width: 100%;
-    color: #101010 ;
-}
-
 .navbar-light .navbar-toggler {
     color: #ffffff !important;
 }
