@@ -4,6 +4,8 @@ html {
 
 header {
     font-family: 'Barlow Condensed';
+    width: 100%;
+    background-color: #101010;
 }
 
 body {
@@ -23,7 +25,7 @@ body {
 
 
 #title-text {
-    color: rgb(3, 170, 3);
+    color: rgb(3, 170, 3) !important;
 }
 
 .bg-dark {
@@ -41,7 +43,18 @@ body {
     margin-top: 50px;
 }
 
+
 /* Dropdown menu */
+
+.navbar {
+    width: 100%;
+}
+
+#topnav {
+    width: 100%;
+    color: #101010 ;
+}
+
 .navbar-light .navbar-toggler {
     color: #ffffff !important;
 }
@@ -114,7 +127,16 @@ body {
 }
 
 /* Product page */
-
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
 
 
 /* Product Detail Page */
@@ -128,7 +150,27 @@ body {
 }
 
 .description-form-group {
-    width: 250px;
+    margin-top: 1rem;
+}
+
+.description-form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.description-form-group textarea {
+    width: 100%;
+    min-height: 150px; /* Adjust based on the expected length of the description */
+    padding: 0.5rem;
+    border: 1px solid #ced4da; /* Default border color */
+    border-radius: 0.25rem; /* Rounded corners */
+    background-color: #f8f9fa; /* Background color to differentiate */
+    resize: vertical; /* Allow vertical resizing only */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    font-size: 1rem; /* Adjust font size as needed */
+    color: #212529; /* Text color */
+    overflow: auto; /* Handle overflow of content */
 }
 
 .product-detail {

@@ -25,27 +25,27 @@
                     <p class="mb-3 product-title text-black">{{ product.name }}</p>
                     <p class="lead mb-0 text-left font-weight-bold product-price text-black">${{ product.price }}</p>
                     {% if product.rating %}
-                        <small class="text-muted"><i class="fas fa-star mt-0"></i>{{ product.rating }} / 5</small>
+                        <small class="text-black" id="title-text"><i class="fas fa-star mt-0"></i>{{ product.rating }} / 5</small>
                     {% else %}
-                        <small class="text-muted mt-1">No Rating</small>
+                        <small class="text-black mt-1" id="title-text">No Rating</small>
                     {% endif %}
 
                     
-                    <div class="category-form-group mt-3">
+                    <div class="category-form-group mt-3 text-black">
                         <label for="category" class="font-weight-bold">Category:</label>
                         <input id="category" class="form-control" type="text" value="{{ product.category }}" readonly>
                     </div>
 
-                    <div class="size-form-group">
+                    <div class="size-form-group text-black">
                         <label for="size" class="font-weight-bold">Size:</label>
                         <input id="size" class="form-control" type="text" value="{{ product.size }}" readonly>
                     </div>
 
                     
 
-                    <div class="description-form-group mt-2">
+                    <div class="description-form-group mt-2 text-black">
                         <label for="description" class="font-weight-bold">Description:</label>
-                        <input id="description" class="form-control" type="text" value="{{ product.description }}" readonly>
+                        <textarea id="description" class="form-control" readonly>{{ product.description }}</textarea>
                     </div>
 
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
