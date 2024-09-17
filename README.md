@@ -2,17 +2,19 @@
 
 Green Couture is an ecommerce platform specializing in the sale of high-end luxury goods with a focus on sustainability. The store offers pre-owned designer fashion items, including clothing, accessories, and footwear from renowned luxury brands. Green Couture emphasizes eco-consciousness by promoting circular fashion, allowing customers to purchase gently used, high-quality luxury items at more accessible prices while contributing to reducing waste and extending the life cycle of premium products.
 
+![alt text](documentation/image-1.png)
+![alt text](documentation/image-23.png)
+
 ## Table Of Contents 
 
-. [Business Model](#business-model)
-. [User Experience](#user-experience)
-. [Wireframes] (#wireframes)
-. [Features](#features)
-. [Database] (#database-schema)
-. [Technologies Used](#technologies-used)
-. [Testing](#testing)
-. [Deployment](#deployment)
-. [Credits](#credits)
+1. [Business Model](#business-model)
+2. [User Experience](#user-experience)
+3. [Features](#features)
+4. [Database Schema](#database-schema)
+5. [Technologies Used](#technologies-used)
+6. [Testing](#testing)
+7. [Deployment](#deployment)
+8. [Credits](#credits)
 
 # Business Model 
 ## Overview
@@ -42,7 +44,6 @@ GreenCouture is committed to delivering high-quality, sustainable fashion that n
    - **Secure Payment Systems**: We integrate secure payment gateways to ensure safe and reliable transactions for our customers.
 
 
-
 # User Experience
 ## User goals are:
  - View products.
@@ -68,9 +69,16 @@ GreenCouture is committed to delivering high-quality, sustainable fashion that n
 - The website uses 3 main colours. The footer and the nav are both dark grey with green icons and buttons. 
 The main body of each page is a lightgray to contrast with the darker shade in the nav and footer. I chose green as this colour represents sustainablity, which is a main priority at Green Couture.
 
+- For the product page I made the background 'lightgray'. I felt this complemented the three main colours nicely without being over captivating
+
+![alt text](documentation/image-2.png)
+![alt text](documentationimage-4.png)
+
 
 ### Font 
 - I decided to use the 'Barlow Condensed' font from [GoogleFonts](https://fonts.google.com/) throughout all pages of the website, because it is plain while also being captivating for the viewer. 
+
+![alt text](documentation/image-3.png)
 
 ### Icons 
 - The icons are found in both the nav and footer, located at the bottom of every page. They are taken from [Fontawesome](https://fontawesome.com/), and are all utilised as classes in the i tag, therefore easily targeted and customised. Once an icon clicked, the link will bring you to the desired website.
@@ -79,22 +87,63 @@ The main body of each page is a lightgray to contrast with the darker shade in t
 ### Navbar
 - The website incorpates a responsive navbar depending on the screen size in use. The navbar features a dropdown menu with links to the profile page, a search bar and also a link to your basket. When viewing the site on a mobile, a burger icon is on the top left hand corner, and the other buttons are placed on the right hand side.
 
+![alt text](documentation/image-5.png)
+
 - If the site user clicks on the search icon, and search bar will toggle beneath so the user can make search queries to find a desired item. 
+
+![alt text](documentation/image-6.png)
 
 ### Footer 
 - At the bottom of each page there is a footer. It is styled in the same color as the navbar the keep consistency within the site(#fc9003). Here, you can find links the social media sites like Youtube, Facebook and Twitter.
 
+![alt text](documentationimage-7.png)
+
+- If a user opens the link Facebook they will be directed to out stores very own business profile. 
+
+![alt text](documentation/image.png)
+
+
 ### Home Page
 - The home page of the site showcases an image of some items in stock on the website. The main heading reads 'Pre-loved luxury goods' and beneaht that, lies a button that links the user to the product page.
+
+![alt text](documentation/image-8.png)
 
 ### Product Page 
 - The product page is where users can browse and find their desired products. At the top of the page, the amount of results can be found along with a sort by box, which allowes the user to arrange the order of products depending on price, rating etc. 
 
+![alt text](documentation/image-9.png)
+
 ### Product Detail Page
-- Once a user clicks on a product, they are brought to the product detail page. This page gives a full breakdown and description of the product. Once a user clicks the 'Add To Bag' button, a pop up will be displayed on the top right corner of the page, notifying the user that the product has been added to their bag. Once the user confirms this by clicking the button they will be brought to the checkout page.
+- Once a user clicks on a product, they are brought to the product detail page. This page gives a full breakdown and description of the product. Once a user clicks the 'Add To Bag' button, a pop up will be displayed on the top right corner of the page, notifying the user that the product has been added to their bag. Once the user confirms this by clicking the button they will be brought to the bag page.
+
+![alt text](documentation/image-10.png)
+![alt text](documentation/image-11.png)
+
+### Bag Page
+- The bag page follows the product detail page when the user confirms to proceed to checkout. On this page the user can see a list of all the item currently in their shopping bag.
+
+![alt text](documentation/image-12.png)
 
 ### Checkout Page
 - The checkout page is populated with emtpy fields. The user can then enter their full name and email, followed by their delivery address and credit card details. Once the user is ready they can click the complete order button, which will display a loading overlay, followed by success message notifying the user their purchase has been successfull.
+
+![alt text](documentation/image-13.png)
+![alt text](documentation/image-14.png)
+
+### Checkout Success Page
+- The checkout success page gives confirmation of the order. If a user is authenticated they will see the order details. If not, they will not see the details. This is to ensure complete privacy.
+
+![alt text](documentation/image-15.png)
+
+### Profile Page
+- The profile page allowes the user to set default delivery information. This can be updated by the user on the front end if they click the update profile button
+
+![alt text](documentation/image-16.png)
+
+### Faq Page
+- The user can navigate to the faq page by finding it in the dropdown menu in the navbar. On this page, they can find many frequently asked questions about the business.
+
+![alt text](documentation/image-17.png)
 
 # Database Schema
 
@@ -190,11 +239,13 @@ The main body of each page is a lightgray to contrast with the darker shade in t
 - I used Django, a python based framework to complete this project. Django provides a structure that makes the development process simple and clean.
 
 ## Librares 
-
 ### Google Fonts
 - I used [GoogleFonts](https://fonts.google.com/) to import the 'Chivo Monu' font. 
+![alt text](documentation/image-18.png)
+
 ### Fontawesome
-- I used [Fontawesome](https://fontawesome.com/) for the font styling throughout.
+- I used [Fontawesome](https://fontawesome.com/) for the icon styling throughout.
+
 
 ## Platforms
 
@@ -205,21 +256,31 @@ The main body of each page is a lightgray to contrast with the darker shade in t
 - I used Github user stories to make sure that I was developing the site in the right direction. I added labels to all of my user stories. Each user story was either labelled with Must Have, Should Have, Could Have and Won't Have.
 - I also created my own custom board in the Project section in order to keep track of my progress. The board includes three section. To do, In Progress, and Done. I would regualrly make changes to the board to remind myself of other features that needed to be created.
 
+![alt text](documentation/image-19.png)
+
 ### Gitpod
 - Gitpod was used as my IDE for the project development.
 
 # Testing
 
 ### Validation 
-- HTML has been validated with [W3C HTML5 Validator](https://validator.w3.org/). All pages were tested until the message below was visible.
+- HTML has been validated with [W3C HTML5 Validator](https://validator.w3.org/). All pages were tested until the message below was visible. The javascript in the base caused a warning but no errors were found.
+
+![alt text](documentation/image-29.png)
 
 - CSS has been validated with [W3C CSS Validator](https://jigsaw.w3.org/css-validator/). These were the results.
 
+![alt text](documentation/image-20.png)
+
 - Python has been validated with until no errors were found.[CI PYTHON LINTER](https://pep8ci.herokuapp.com/).
+
+![alt text](documentation/image-21.png)
 
 ### Manual Testing 
 - I used Devtools for the development of this website. I often would test different styles in the devtools environment, before writing them in my style.css file. 
-- I used the 'Lighthouse' feature to ensure my project scored high in accessibilty on each page.
+- I used the 'Lighthouse' feature to ensure my project scored high in accessibilty and SEO on each page.
+
+![alt text](image-22.png)
 
 #### Desktop Testing
 - The site was developed on a laptop and the majority of the testing was done on Google Chrome.
@@ -256,7 +317,6 @@ The main body of each page is a lightgray to contrast with the darker shade in t
 
 
 # Credits
-
 ## Boutique Ado Walkthrough Project
 - I found the 'Boutique Ado'  walkthrough project extemely helpful. The site incorporated many similar features and systmens to my own project and took alot of inspiration of the neat aesthetics of an e-commerce fashion store. 
 
