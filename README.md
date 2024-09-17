@@ -1,4 +1,4 @@
-# Green Couture Website
+# Green Couture 
 
 Green Couture is an ecommerce platform specializing in the sale of high-end luxury goods with a focus on sustainability. The store offers pre-owned designer fashion items, including clothing, accessories, and footwear from renowned luxury brands. Green Couture emphasizes eco-consciousness by promoting circular fashion, allowing customers to purchase gently used, high-quality luxury items at more accessible prices while contributing to reducing waste and extending the life cycle of premium products.
 
@@ -6,7 +6,6 @@ Green Couture is an ecommerce platform specializing in the sale of high-end luxu
 ![alt text](documentation/image-23.png)
 
 ## Table Of Contents 
-
 1. [Business Model](#business-model)
 2. [User Experience](#user-experience)
 3. [Features](#features)
@@ -18,14 +17,12 @@ Green Couture is an ecommerce platform specializing in the sale of high-end luxu
 
 # Business Model 
 ## Overview
-
-GreenCouture is committed to delivering high-quality, sustainable fashion that not only meets the style needs of our customers but also aligns with our core values of environmental responsibility and ethical practices. Our business model focuses on integrating sustainability into every aspect of our operations, from product sourcing to customer engagement.
+Green Couture is committed to delivering high-quality, sustainable fashion that not only meets the style needs of our customers but also aligns with our core values of environmental responsibility and ethical practices. Our business model focuses on integrating sustainability into every aspect of our operations, from product sourcing to customer engagement.
 
 ## Key Strategies
-
 ### 1. Sustainable Product Offerings
 - **Eco-Friendly Materials**: We prioritize the use of organic and recycled materials in our products to minimize environmental impact.
-   - **Ethical Manufacturing**: Our products are sourced from manufacturers who adhere to fair labor practices and environmental regulations.
+ - **Ethical Manufacturing**: Our products are sourced from manufacturers who adhere to fair labor practices and environmental regulations.
 
 ### 2. Customer-Centric Approach
    - **Personalized User Profiles**: We offer customized shopping experiences by maintaining detailed user profiles, including default delivery information and order history.
@@ -72,7 +69,7 @@ The main body of each page is a lightgray to contrast with the darker shade in t
 - For the product page I made the background 'lightgray'. I felt this complemented the three main colours nicely without being over captivating
 
 ![alt text](documentation/image-2.png)
-![alt text](documentationimage-4.png)
+![alt text](documentation/image-4.png)
 
 
 ### Font 
@@ -96,7 +93,7 @@ The main body of each page is a lightgray to contrast with the darker shade in t
 ### Footer 
 - At the bottom of each page there is a footer. It is styled in the same color as the navbar the keep consistency within the site(#fc9003). Here, you can find links the social media sites like Youtube, Facebook and Twitter.
 
-![alt text](documentationimage-7.png)
+![alt text](documentation/image-7.png)
 
 - If a user opens the link Facebook they will be directed to out stores very own business profile. 
 
@@ -246,6 +243,8 @@ The main body of each page is a lightgray to contrast with the darker shade in t
 ### Fontawesome
 - I used [Fontawesome](https://fontawesome.com/) for the icon styling throughout.
 
+![alt text](documentation/image33.png)
+
 
 ## Platforms
 
@@ -280,12 +279,14 @@ The main body of each page is a lightgray to contrast with the darker shade in t
 - I used Devtools for the development of this website. I often would test different styles in the devtools environment, before writing them in my style.css file. 
 - I used the 'Lighthouse' feature to ensure my project scored high in accessibilty and SEO on each page.
 
-![alt text](image-22.png)
+![alt text](documentation/image-22.png)
 
 #### Desktop Testing
 - The site was developed on a laptop and the majority of the testing was done on Google Chrome.
 - The site was tested on other browsers.
 - The site was sent to friends and family with different laptop sizes to get different looks.
+
+![alt text](documentation/image111.png)
 
 ### Mobile Testing
 - I sent the site to myself and viewed it on a Iphone XR.
