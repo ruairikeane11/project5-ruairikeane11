@@ -18,6 +18,10 @@ body {
     padding-right: 0px;
 }
 
+.container-fluid {
+    padding-right: 0px !important;
+}
+
 /* Index page */
 .text-box {
     background-color: rgba(0, 0, 0, 0.5);

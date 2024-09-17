@@ -1,0 +1,17 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /account_login/
+Disallow: /account_logout/
+Disallow: /account_signup/
+Disallow: /profile/
+Disallow: /checkout/
+Disallow: /cart/
+Disallow: /bag/
+Disallow: /description/
+
+# Allow everything else
+Allow: /
+
+# Sitemap 
+Sitemap: # Sitemap (if you have one, update the URL to the correct one)
+Sitemap: https://8000-ruairikeane-project5rua-2p707f9gxsh.ws.codeinstitute-ide.net/sitemap.xml

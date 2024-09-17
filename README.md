@@ -3,13 +3,44 @@
 Green Couture is an ecommerce platform specializing in the sale of high-end luxury goods with a focus on sustainability. The store offers pre-owned designer fashion items, including clothing, accessories, and footwear from renowned luxury brands. Green Couture emphasizes eco-consciousness by promoting circular fashion, allowing customers to purchase gently used, high-quality luxury items at more accessible prices while contributing to reducing waste and extending the life cycle of premium products.
 
 ## Table Of Contents 
-1. [User Experience](#user-experience)
-2. [Wireframes] (#wireframes)
-3. [Features](#features)
-4. [Technologies Used](#technologies-used)
-5. [Testing](#testing)
-6. [Deployment](#deployment)
-7. [Credits](#credits)
+
+. [Business Model](#business-model)
+. [User Experience](#user-experience)
+. [Wireframes] (#wireframes)
+. [Features](#features)
+. [Database] (#database-schema)
+. [Technologies Used](#technologies-used)
+. [Testing](#testing)
+. [Deployment](#deployment)
+. [Credits](#credits)
+
+# Business Model 
+## Overview
+
+GreenCouture is committed to delivering high-quality, sustainable fashion that not only meets the style needs of our customers but also aligns with our core values of environmental responsibility and ethical practices. Our business model focuses on integrating sustainability into every aspect of our operations, from product sourcing to customer engagement.
+
+## Key Strategies
+
+### 1. Sustainable Product Offerings
+- **Eco-Friendly Materials**: We prioritize the use of organic and recycled materials in our products to minimize environmental impact.
+   - **Ethical Manufacturing**: Our products are sourced from manufacturers who adhere to fair labor practices and environmental regulations.
+
+### 2. Customer-Centric Approach
+   - **Personalized User Profiles**: We offer customized shopping experiences by maintaining detailed user profiles, including default delivery information and order history.
+   - **Responsive Customer Support**: Our contact page ensures that customer inquiries and issues are handled promptly and professionally.
+
+### 3. Community Engagement
+   - **Educational Content**: We provide FAQs and informative content about sustainable practices and fashion to educate our customers and raise awareness.
+   - **Newsletter Subscriptions**: Our subscription model keeps customers informed about new arrivals, promotions, and sustainability initiatives.
+
+### 4. Efficient Operations
+   - **Streamlined Order Management**: Our system efficiently handles orders, updates totals, and calculates delivery costs, ensuring a smooth purchasing experience for our customers.
+   - **Data-Driven Decisions**: We leverage data from customer interactions, order histories, and feedback to continually refine our products and services.
+
+### 5. **Innovative Technology Integration**
+   - **Advanced E-commerce Platform**: We utilize a robust e-commerce platform to provide a seamless shopping experience, including real-time updates on stock, pricing, and delivery options.
+   - **Secure Payment Systems**: We integrate secure payment gateways to ensure safe and reliable transactions for our customers.
+
 
 
 # User Experience
@@ -64,6 +95,82 @@ The main body of each page is a lightgray to contrast with the darker shade in t
 
 ### Checkout Page
 - The checkout page is populated with emtpy fields. The user can then enter their full name and email, followed by their delivery address and credit card details. Once the user is ready they can click the complete order button, which will display a loading overlay, followed by success message notifying the user their purchase has been successfull.
+
+# Database Schema
+
+### Category
+- **id**: Integer, Primary Key, Auto-increment
+- **name**: CharField (max_length=254)
+- **friendly_name**: CharField (max_length=254, null=True, blank=True)
+
+### Product
+- **id**: Integer, Primary Key, Auto-increment
+- **category**: ForeignKey to `Category`, null=True, blank=True
+- **sku**: CharField (max_length=254, null=True, blank=True)
+- **name**: CharField (max_length=254)
+- **size**: CharField (max_length=8, choices=[('XS', 'Extra Small'), ('S', 'Small'), ('M', 'Medium'), ('L', 'Large'), ('Xl', 'Extra Large')] + [('UK6', 'UK 6'), ('UK7', 'UK 7'), ('UK8', 'UK 8'), ('UK9', 'UK 9'), ('UK10', 'UK 10'), ('UK11', 'UK 11')] + [('One Size', 'One Size')], null=True, blank=True)
+- **description**: TextField
+- **price**: DecimalField (max_digits=6, decimal_places=2)
+- **rating**: DecimalField (max_digits=6, decimal_places=2, null=True, blank=True)
+- **image_url**: URLField (max_length=1024, null=True, blank=True)
+- **image**: ImageField (null=True, blank=True)
+
+### Order
+- **id**: Integer, Primary Key, Auto-increment
+- **order_number**: CharField (max_length=32, null=True, editable=False)
+- **user_profile**: ForeignKey to `UserProfile`, null=True, blank=True
+- **full_name**: CharField (max_length=50)
+- **email**: EmailField (max_length=254)
+- **phone_number**: CharField (max_length=20)
+- **country**: CountryField
+- **postcode**: CharField (max_length=20, null=True, blank=True)
+- **town_or_city**: CharField (max_length=40)
+- **street_address1**: CharField (max_length=80)
+- **street_address2**: CharField (max_length=80, null=True, blank=True)
+- **county**: CharField (max_length=80, null=True, blank=True)
+- **date**: DateTimeField (auto_now_add=True)
+- **delivery_cost**: DecimalField (max_digits=6, decimal_places=2, default=0)
+- **order_total**: DecimalField (max_digits=10, decimal_places=2, default=0)
+- **grand_total**: DecimalField (max_digits=10, decimal_places=2, default=0)
+- **original_bag**: TextField
+- **stripe_pid**: CharField (max_length=254, default='')
+
+### OrderLineItem
+- **id**: Integer, Primary Key, Auto-increment
+- **order**: ForeignKey to `Order`
+- **product**: ForeignKey to `Product`
+- **quantity**: Integer (default=1)
+- **lineitem_total**: DecimalField (max_digits=6, decimal_places=2, editable=False)
+
+### Contact
+- **id**: Integer, Primary Key, Auto-increment
+- **title**: CharField (max_length=200)
+- **name**: CharField (max_length=50)
+- **email**: CharField (max_length=50)
+- **content**: TextField
+- **created_on**: DateTimeField (auto_now=True)
+
+### Faq
+- **id**: Integer, Primary Key, Auto-increment
+- **question**: CharField (max_length=255)
+- **answer**: TextField
+
+### UserProfile
+- **id**: Integer, Primary Key, Auto-increment
+- **user**: OneToOneField to `User`
+- **default_phone_number**: CharField (max_length=20, null=True, blank=True)
+- **default_street_address1**: CharField (max_length=80, null=True, blank=True)
+- **default_street_address2**: CharField (max_length=80, null=True, blank=True)
+- **default_town_or_city**: CharField (max_length=40, null=True, blank=True)
+- **default_county**: CharField (max_length=80, null=True, blank=True)
+- **default_postcode**: CharField (max_length=20, null=True, blank=True)
+- **default_country**: CountryField (null=True, blank=True)
+
+### Subscribe
+- **id**: Integer, Primary Key, Auto-increment
+- **email**: EmailField (unique=True)
+- **date_subscribed**: DateTimeField (auto_now_add=True)
+
 
 # Technologies Used 
 ### HTML 
