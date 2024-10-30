@@ -27,12 +27,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
     'green-couture11-736490e30356.herokuapp.com',
-    '8000-ruairikeane-project5rua-2p707f9gxsh.ws.codeinstitute-ide.net'
+    '8000-ruairikeane-project5rua-2p707f9gxsh.ws.codeinstitute-ide.net',
+    '8000-ruairikeane-project5rua-ps5tbio5obk.ws.codeinstitute-ide.net',
 ]
 
 
@@ -66,6 +67,7 @@ INSTALLED_APPS = [
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-ruairikeane-project5rua-6pqws3ym3zp.ws.codeinstitute-ide.net',
     'https://8000-ruairikeane-project5rua-2p707f9gxsh.ws.codeinstitute-ide.net',
+    'https://8000-ruairikeane-project5rua-ps5tbio5obk.ws.codeinstitute-ide.net',
 ]
 
 MIDDLEWARE = [
