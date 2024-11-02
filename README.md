@@ -144,78 +144,70 @@ The main body of each page is a lightgray to contrast with the darker shade in t
 
 # Database Schema
 
-### Category
-- **id**: Integer, Primary Key, Auto-increment
-- **name**: CharField (max_length=254)
-- **friendly_name**: CharField (max_length=254, null=True, blank=True)
+| **Model**        | **Field Name**           | **Field Type**                              | **Attributes**                                          |
+|------------------|--------------------------|---------------------------------------------|--------------------------------------------------------|
+| **Category**     | id                       | Integer                                     | Primary Key, Auto-increment                            |
+|                  | name                     | CharField                                   | max_length=254                                         |
+|                  | friendly_name            | CharField                                   | max_length=254, null=True, blank=True                 |
+| **Product**      | id                       | Integer                                     | Primary Key, Auto-increment                            |
+|                  | category                 | ForeignKey to `Category`                   | null=True, blank=True                                  |
+|                  | sku                      | CharField                                   | max_length=254, null=True, blank=True                 |
+|                  | name                     | CharField                                   | max_length=254                                         |
+|                  | size                     | CharField                                   | max_length=8, choices=[('XS', 'Extra Small'), ...], null=True, blank=True |
+|                  | description              | TextField                                   |                                                        |
+|                  | price                    | DecimalField                                | max_digits=6, decimal_places=2                         |
+|                  | rating                   | DecimalField                                | max_digits=6, decimal_places=2, null=True, blank=True |
+|                  | image_url                | URLField                                    | max_length=1024, null=True, blank=True                |
+|                  | image                    | ImageField                                  | null=True, blank=True                                  |
+| **Order**        | id                       | Integer                                     | Primary Key, Auto-increment                            |
+|                  | order_number             | CharField                                   | max_length=32, null=True, editable=False              |
+|                  | user_profile             | ForeignKey to `UserProfile`                | null=True, blank=True                                  |
+|                  | full_name                | CharField                                   | max_length=50                                         |
+|                  | email                    | EmailField                                  | max_length=254                                         |
+|                  | phone_number             | CharField                                   | max_length=20                                         |
+|                  | country                  | CountryField                                |                                                        |
+|                  | postcode                 | CharField                                   | max_length=20, null=True, blank=True                  |
+|                  | town_or_city             | CharField                                   | max_length=40                                         |
+|                  | street_address1          | CharField                                   | max_length=80                                         |
+|                  | street_address2          | CharField                                   | max_length=80, null=True, blank=True                  |
+|                  | county                   | CharField                                   | max_length=80, null=True, blank=True                  |
+|                  | date                     | DateTimeField                               | auto_now_add=True                                     |
+|                  | delivery_cost            | DecimalField                                | max_digits=6, decimal_places=2, default=0             |
+|                  | order_total              | DecimalField                                | max_digits=10, decimal_places=2, default=0            |
+|                  | grand_total              | DecimalField                                | max_digits=10, decimal_places=2, default=0            |
+|                  | original_bag            | TextField                                   |                                                        |
+|                  | stripe_pid               | CharField                                   | max_length=254, default=''                             |
+| **OrderLineItem**| id                       | Integer                                     | Primary Key, Auto-increment                            |
+|                  | order                    | ForeignKey to `Order`                      | null=False, blank=False, on_delete=models.CASCADE      |
+|                  | product                  | ForeignKey to `Product`                    | null=False, blank=False, on_delete=models.CASCADE      |
+|                  | quantity                 | Integer                                     | default=1                                             |
+|                  | lineitem_total           | DecimalField                                | max_digits=6, decimal_places=2, editable=False        |
+| **Contact**      | id                       | Integer                                     | Primary Key, Auto-increment                            |
+|                  | title                    | CharField                                   | max_length=200                                         |
+|                  | name                     | CharField                                   | max_length=50                                         |
+|                  | email                    | CharField                                   | max_length=50                                         |
+|                  | content                  | TextField                                   |                                                        |
+|                  | created_on              | DateTimeField                               | auto_now=True                                         |
+| **Faq**          | id                       | Integer                                     | Primary Key, Auto-increment                            |
+|                  | question                 | CharField                                   | max_length=255                                         |
+|                  | answer                   | TextField                                   |                                                        |
+| **UserProfile**  | id                       | Integer                                     | Primary Key, Auto-increment                            |
+|                  | user                     | OneToOneField to `User`                    |                                                        |
+|                  | default_phone_number     | CharField                                   | max_length=20, null=True, blank=True                  |
+|                  | default_street_address1  | CharField                                   | max_length=80, null=True, blank=True                  |
+|                  | default_street_address2  | CharField                                   | max_length=80, null=True, blank=True                  |
+|                  | default_town_or_city     | CharField                                   | max_length=40, null=True, blank=True                  |
+|                  | default_county          | CharField                                   | max_length=80, null=True, blank=True                  |
+|                  | default_postcode        | CharField                                   | max_length=20, null=True, blank=True                  |
+|                  | default_country         | CountryField                                | null=True, blank=True                                  |
+| **Subscribe**    | id                       | Integer                                     | Primary Key, Auto-increment                            |
+|                  | email                    | EmailField                                  | unique=True                                            |
+|                  | date_subscribed          | DateTimeField                               | auto_now_add=True                                     |
 
-### Product
-- **id**: Integer, Primary Key, Auto-increment
-- **category**: ForeignKey to `Category`, null=True, blank=True
-- **sku**: CharField (max_length=254, null=True, blank=True)
-- **name**: CharField (max_length=254)
-- **size**: CharField (max_length=8, choices=[('XS', 'Extra Small'), ('S', 'Small'), ('M', 'Medium'), ('L', 'Large'), ('Xl', 'Extra Large')] + [('UK6', 'UK 6'), ('UK7', 'UK 7'), ('UK8', 'UK 8'), ('UK9', 'UK 9'), ('UK10', 'UK 10'), ('UK11', 'UK 11')] + [('One Size', 'One Size')], null=True, blank=True)
-- **description**: TextField
-- **price**: DecimalField (max_digits=6, decimal_places=2)
-- **rating**: DecimalField (max_digits=6, decimal_places=2, null=True, blank=True)
-- **image_url**: URLField (max_length=1024, null=True, blank=True)
-- **image**: ImageField (null=True, blank=True)
+## ER Diagram 
+![alt text](documentation/er_diagram.png)
 
-### Order
-- **id**: Integer, Primary Key, Auto-increment
-- **order_number**: CharField (max_length=32, null=True, editable=False)
-- **user_profile**: ForeignKey to `UserProfile`, null=True, blank=True
-- **full_name**: CharField (max_length=50)
-- **email**: EmailField (max_length=254)
-- **phone_number**: CharField (max_length=20)
-- **country**: CountryField
-- **postcode**: CharField (max_length=20, null=True, blank=True)
-- **town_or_city**: CharField (max_length=40)
-- **street_address1**: CharField (max_length=80)
-- **street_address2**: CharField (max_length=80, null=True, blank=True)
-- **county**: CharField (max_length=80, null=True, blank=True)
-- **date**: DateTimeField (auto_now_add=True)
-- **delivery_cost**: DecimalField (max_digits=6, decimal_places=2, default=0)
-- **order_total**: DecimalField (max_digits=10, decimal_places=2, default=0)
-- **grand_total**: DecimalField (max_digits=10, decimal_places=2, default=0)
-- **original_bag**: TextField
-- **stripe_pid**: CharField (max_length=254, default='')
 
-### OrderLineItem
-- **id**: Integer, Primary Key, Auto-increment
-- **order**: ForeignKey to `Order`
-- **product**: ForeignKey to `Product`
-- **quantity**: Integer (default=1)
-- **lineitem_total**: DecimalField (max_digits=6, decimal_places=2, editable=False)
-
-### Contact
-- **id**: Integer, Primary Key, Auto-increment
-- **title**: CharField (max_length=200)
-- **name**: CharField (max_length=50)
-- **email**: CharField (max_length=50)
-- **content**: TextField
-- **created_on**: DateTimeField (auto_now=True)
-
-### Faq
-- **id**: Integer, Primary Key, Auto-increment
-- **question**: CharField (max_length=255)
-- **answer**: TextField
-
-### UserProfile
-- **id**: Integer, Primary Key, Auto-increment
-- **user**: OneToOneField to `User`
-- **default_phone_number**: CharField (max_length=20, null=True, blank=True)
-- **default_street_address1**: CharField (max_length=80, null=True, blank=True)
-- **default_street_address2**: CharField (max_length=80, null=True, blank=True)
-- **default_town_or_city**: CharField (max_length=40, null=True, blank=True)
-- **default_county**: CharField (max_length=80, null=True, blank=True)
-- **default_postcode**: CharField (max_length=20, null=True, blank=True)
-- **default_country**: CountryField (null=True, blank=True)
-
-### Subscribe
-- **id**: Integer, Primary Key, Auto-increment
-- **email**: EmailField (unique=True)
-- **date_subscribed**: DateTimeField (auto_now_add=True)
 
 
 # Technologies Used 
