@@ -1,19 +1,17 @@
 {% extends "base.html" %}
 {% load static %}
 
-
-
 {% block content %}
     <div class="overlay"></div>
     <div class="container-fluid">
-        <div class="row">
+        <div class="row my-5">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-                <div class="image-container my-5 ml-5">
+                <div class="image-container">
                     {% if product.image %}
                         <a href="{{ product.image.url }}" target="_blank">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
-                        {% else %}
+                    {% else %}
                         <a href="">
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                         </a>
@@ -21,54 +19,52 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-6">
-                <div class="product-details-container mb-5 mt-md-5">
+                <div class="product-details-container">
                     <p class="mb-3 product-title text-black">{{ product.name }}</p>
-                    <p class="lead mb-0 text-left font-weight-bold product-price text-black">${{ product.price }}</p>
+                    <p class="lead mb-0 font-weight-bold product-price text-black">${{ product.price }}</p>
                     {% if product.rating %}
                         <small class="text-black" id="title-text"><i class="fas fa-star mt-0"></i>{{ product.rating }} / 5</small>
                     {% else %}
                         <small class="text-black mt-1" id="title-text">No Rating</small>
                     {% endif %}
                     {% if request.user.is_superuser %}
-                    <small class="ml-3">
-                        <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                    </small>
+                        <small class="ml-3">
+                            <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                        </small>
                     {% endif %}
 
-                    
-                    <div class="category-form-group mt-3 text-black">
-                        <label for="category" class="font-weight-bold">Category:</label>
-                        <input id="category" class="form-control" type="text" value="{{ product.category }}" readonly>
+                    <div class="row mt-3 text-black">
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="category" class="font-weight-bold">Category:</label>
+                            <input id="category" class="form-control" type="text" value="{{ product.category }}" readonly>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="size" class="font-weight-bold">Size:</label>
+                            <input id="size" class="form-control" type="text" value="{{ product.size }}" readonly>
+                        </div>
                     </div>
-
-                    <div class="size-form-group text-black">
-                        <label for="size" class="font-weight-bold">Size:</label>
-                        <input id="size" class="form-control" type="text" value="{{ product.size }}" readonly>
-                    </div>
-
-                    
 
                     <div class="description-form-group mt-2 text-black">
                         <label for="description" class="font-weight-bold">Description:</label>
                         <textarea id="description" class="form-control" readonly>{{ product.description }}</textarea>
                     </div>
 
-                    <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
+                    <form class="form mt-4" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
-                                                   
-                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
+                            <div class="col-12">
+                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
-                                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+                                <input type="submit" class="btn btn-black rounded-0 text-uppercase" value="Add to Bag">
                             </div>
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </div>
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </form>
-                    
                 </div>
             </div>
         </div>
