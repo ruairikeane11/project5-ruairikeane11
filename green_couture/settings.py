@@ -34,6 +34,7 @@ ALLOWED_HOSTS = [
     'green-couture11-736490e30356.herokuapp.com',
     '8000-ruairikeane-project5rua-2p707f9gxsh.ws.codeinstitute-ide.net',
     '8000-ruairikeane-project5rua-ps5tbio5obk.ws.codeinstitute-ide.net',
+    '8000-ruairikeane-project5rua-r75df2ri80u.ws.codeinstitute-ide.net',
 ]
 
 
@@ -47,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'django_extensions',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -68,6 +70,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://8000-ruairikeane-project5rua-6pqws3ym3zp.ws.codeinstitute-ide.net',
     'https://8000-ruairikeane-project5rua-2p707f9gxsh.ws.codeinstitute-ide.net',
     'https://8000-ruairikeane-project5rua-ps5tbio5obk.ws.codeinstitute-ide.net',
+    'https://8000-ruairikeane-project5rua-r75df2ri80u.ws.codeinstitute-ide.net'
 ]
 
 MIDDLEWARE = [

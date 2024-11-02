@@ -1,14 +1,13 @@
 {% extends "account/base.html" %}
-
 {% load i18n %}
 
 {% block head_title %}{% trans "Sign Out" %}{% endblock %}
 
 {% block inner_content %}
 <hr>
-<h2 class="logo-font mb-4">{% trans "Sign Out" %}</h2>
+<h2 class=" text-black mb-4">{% trans "Sign Out" %}</h2>
 <hr>
-<p>{% trans 'Are you sure you want to sign out?' %}</p>
+<p class="text-black">{% trans 'Are you sure you want to sign out?' %}</p>
 
 <form method="post" action="{% url 'account_logout' %}">
   {% csrf_token %}
@@ -18,20 +17,41 @@
   <a class="btn btn-outline-black rounded-0" href="{% url 'home' %}">Cancel</a>
   <button type="submit">{% trans 'Sign Out' %}</button>
 </form>
-
-
-  <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-  </div>
-
-  <div class="container header-container">
-    <div class="row">
-        <div class="col"></div>
-    </div>
-</div>
-
-
-
 {% endblock %}
+
+{% block footer %}
+    <footer class="footer bg-dark text-light text-center py-1 mt-auto">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <ul class="list-inline text-center mt-1 mb-1">
+                        <li class="list-inline-item sm-icon mx-5">
+                            <a href="https://www.twitter.com/" aria-label="Twitter">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-twitter fa-stack-1x text-success"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item sm-icon mx-5">
+                            <a href="https://www.facebook.com/profile.php?id=61565652278446" aria-label="Facebook">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-facebook-f fa-stack-1x text-success"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item sm-icon mx-5">
+                            <a href="https://www.youtube.com/" aria-label="Youtube">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-youtube fa-stack-1x text-success"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% endblock %}

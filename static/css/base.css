@@ -111,6 +111,7 @@ body {
 
 .navbar-toggler-mb {
     display: block;
+    color: white !important;
 }
 
 .navbar-toggler {
@@ -469,4 +470,6 @@ input[name='q']::placeholder {
     body {
         height: calc(100vh - 116px);
     }
+
+
 }

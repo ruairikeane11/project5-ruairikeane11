@@ -15,7 +15,7 @@
 
 {% user_display confirmation.email_address.user as user_display %}
 
-<p>{% blocktrans with confirmation.email_address.email as email %}Please confirm that <a href="mailto:{{ email }}">{{ email }}</a> is an e-mail address for user {{ user_display }}.{% endblocktrans %}</p>
+<p class="text-black">{% blocktrans with confirmation.email_address.email as email %}Please confirm that <a href="mailto:{{ email }}">{{ email }}</a> is an e-mail address for user {{ user_display }}.{% endblocktrans %}</p>
 
 <form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
 {% csrf_token %}
@@ -31,3 +31,40 @@
 {% endif %}
 
 {% endblock %}
+
+{% block footer %}
+    <footer class="footer bg-dark text-light text-center py-1 mt-auto">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <ul class="list-inline text-center mt-1 mb-1">
+                        <li class="list-inline-item sm-icon mx-5">
+                            <a href="https://www.twitter.com/" aria-label="Twitter">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-twitter fa-stack-1x text-success"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item sm-icon mx-5">
+                            <a href="https://www.facebook.com/profile.php?id=61565652278446" aria-label="Facebook">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-facebook-f fa-stack-1x text-success"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item sm-icon mx-5">
+                            <a href="https://www.youtube.com/" aria-label="Youtube">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-youtube fa-stack-1x text-success"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% endblock %}
