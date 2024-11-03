@@ -347,6 +347,10 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
+/* Faq */
+.text-info {
+    color: #28a745 !important;
+}
 
 
 /* -------------------------------- Media Queries */

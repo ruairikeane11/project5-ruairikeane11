@@ -1,26 +1,29 @@
 {% extends "base.html" %}
 {% load static %}
-{% block content %}
 
-<div class="container d-flex justify-content-center" id="faq-container">
-    <div class="card bg-dark text-light mt-4 p-4 text-center">
-        <h1>Frequently Asked Questions</h1>
-        <p>Find answers to common questions below.</p>
-        <div class="row">
-            <div class="col-12">
-                <ul class="list-unstyled">
-                    {% for faq in faqs %}
-                    <li class="mb-4">
-                        <h4 class="text-white">{{ faq.question }}</h4>
-                        <p>{{ faq.answer }}</p>
-                    </li>
-                    {% empty %}
-                    <p>No FAQs available at this moment. Please check back later or <a href="{% url 'contact' %}" class="text-success">contact us</a> for more information.</p>
-                    {% endfor %}
-                </ul>
+{% block content %}
+<div class="container my-5" id="faq-container">
+    <div class="card bg-dark text-white shadow-lg p-5 rounded">
+        <h1 class="text-success text-center mb-4">Frequently Asked Questions</h1>
+        <p class="text-center mb-4">Find answers to common questions below.</p>
+
+        <div class="faq-list">
+            {% for faq in faqs %}
+            <div class="faq-item border border-secondary rounded p-3 mb-4">
+                <h5 class="text-uppercase text-danger mb-1">Question:</h5>
+                <h4 class="text-white font-weight-bold">{{ faq.question }}</h4>
+                
+                <hr class="my-3 border-secondary">
+                
+                <h5 class="text-info text-uppercase mb-1">Answer:</h5>
+                <p class="text-light">{{ faq.answer }}</p>
             </div>
+            {% empty %}
+            <p class="text-center">No FAQs available at this moment. Please check back later or 
+                <a href="{% url 'contact' %}" class="text-success">contact us</a> for more information.
+            </p>
+            {% endfor %}
         </div>
     </div>
 </div>
-
 {% endblock %}
