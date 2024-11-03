@@ -8,13 +8,13 @@ Green Couture is an ecommerce platform specializing in the sale of high-end luxu
 ## Table Of Contents 
 1. [Business Model](#business-model)
 2. [User Experience](#user-experience)
-4. [Wireframes](#wireframes)
-3. [Features](#features)
-4. [Database Schema](#database-schema)
-5. [Technologies Used](#technologies-used)
-6. [Testing](#testing)
-7. [Deployment](#deployment)
-8. [Credits](#credits)
+3. [Wireframes](#wireframes)
+4. [Features](#features)
+5. [Database Schema](#database-schema)
+6. [Technologies Used](#technologies-used)
+7. [Testing](#testing)
+8. [Deployment](#deployment)
+9. [Credits](#credits)
 
 # Business Model 
 ## Overview
@@ -80,6 +80,7 @@ The main body of each page is a lightgray to contrast with the darker shade in t
 
 ### Icons 
 - The icons are found in both the nav and footer, located at the bottom of every page. They are taken from [Fontawesome](https://fontawesome.com/), and are all utilised as classes in the i tag, therefore easily targeted and customised. Once an icon clicked, the link will bring you to the desired website.
+
 
 # Wireframes 
 ## Figma 
