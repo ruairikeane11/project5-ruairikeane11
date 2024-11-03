@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
@@ -35,6 +35,7 @@ ALLOWED_HOSTS = [
     '8000-ruairikeane-project5rua-2p707f9gxsh.ws.codeinstitute-ide.net',
     '8000-ruairikeane-project5rua-ps5tbio5obk.ws.codeinstitute-ide.net',
     '8000-ruairikeane-project5rua-r75df2ri80u.ws.codeinstitute-ide.net',
+     '8000-ruairikeane-project5rua-uzasyjbz06q.ws.codeinstitute-ide.net',
 ]
 
 
@@ -70,7 +71,8 @@ CSRF_TRUSTED_ORIGINS = [
     'https://8000-ruairikeane-project5rua-6pqws3ym3zp.ws.codeinstitute-ide.net',
     'https://8000-ruairikeane-project5rua-2p707f9gxsh.ws.codeinstitute-ide.net',
     'https://8000-ruairikeane-project5rua-ps5tbio5obk.ws.codeinstitute-ide.net',
-    'https://8000-ruairikeane-project5rua-r75df2ri80u.ws.codeinstitute-ide.net'
+    'https://8000-ruairikeane-project5rua-r75df2ri80u.ws.codeinstitute-ide.net',
+    'https://8000-ruairikeane-project5rua-uzasyjbz06q.ws.codeinstitute-ide.net'
 ]
 
 MIDDLEWARE = [

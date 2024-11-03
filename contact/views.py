@@ -15,6 +15,8 @@ def contact_us(request):
             messages.success(request,
                              "Your request has been submitted successfully!",
                              extra_tags='info')
+            # Reset the form after successful submission
+            form = ContactForm()  # Create a new instance of the form
     else:
         form = ContactForm()
 
