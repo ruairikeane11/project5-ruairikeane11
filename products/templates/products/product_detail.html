@@ -3,10 +3,10 @@
 
 {% block content %}
     <div class="overlay"></div>
-    <div class="container-fluid">
-        <div class="row my-5">
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-                <div class="image-container">
+    <div class="container-fluid border-container p-4">
+        <div class="row justify-content-center my-5">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="image-container border border-dark p-3">
                     {% if product.image %}
                         <a href="{{ product.image.url }}" target="_blank">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -18,8 +18,8 @@
                     {% endif %}
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-6">
-                <div class="product-details-container">
+            <div class="col-12 col-md-8 col-lg-6">
+                <div class="product-details-container border border-dark p-4 text-center">
                     <p class="mb-3 product-title text-black">{{ product.name }}</p>
                     <p class="lead mb-0 font-weight-bold product-price text-black">${{ product.price }}</p>
                     {% if product.rating %}
@@ -34,23 +34,23 @@
                         </small>
                     {% endif %}
 
-                    <div class="row mt-3 text-black">
+                    <div class="row mt-3 text-black text-center">
                         <div class="col-12 col-md-6 mb-3">
                             <label for="category" class="font-weight-bold">Category:</label>
-                            <input id="category" class="form-control" type="text" value="{{ product.category }}" readonly>
+                            <input id="category" class="form-control text-center" type="text" value="{{ product.category }}" readonly>
                         </div>
                         <div class="col-12 col-md-6 mb-3">
                             <label for="size" class="font-weight-bold">Size:</label>
-                            <input id="size" class="form-control" type="text" value="{{ product.size }}" readonly>
+                            <input id="size" class="form-control text-center" type="text" value="{{ product.size }}" readonly>
                         </div>
                     </div>
 
-                    <div class="description-form-group mt-2 text-black">
+                    <div class="description-form-group mt-2 text-black text-center">
                         <label for="description" class="font-weight-bold">Description:</label>
                         <textarea id="description" class="form-control" readonly>{{ product.description }}</textarea>
                     </div>
 
-                    <form class="form mt-4" action="{% url 'add_to_bag' product.id %}" method="POST">
+                    <form class="form mt-4 text-center" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
                             <div class="col-12">
@@ -69,4 +69,41 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block footer %}
+    <footer class="footer bg-dark text-light text-center py-1 mt-auto">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <ul class="list-inline text-center mt-1 mb-1">
+                        <li class="list-inline-item sm-icon mx-5">
+                            <a href="https://www.twitter.com/" aria-label="Twitter">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-twitter fa-stack-1x text-success"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item sm-icon mx-5">
+                            <a href="https://www.facebook.com/profile.php?id=61565652278446" aria-label="Facebook">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-facebook-f fa-stack-1x text-success"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item sm-icon mx-5">
+                            <a href="https://www.youtube.com/" aria-label="Youtube">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-youtube fa-stack-1x text-success"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 {% endblock %}

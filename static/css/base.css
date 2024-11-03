@@ -142,8 +142,17 @@ body {
 
 
 /* Product Detail Page */
+.border-container {
+    border: 2px solid black;  /* Black border around the entire container */
+    border-radius: 8px;
+    padding: 10px;
+}
+.border {
+    border: 1px solid black; /* Black border around each section */
+}
+
 .category-form-group {
-    width: 85px;
+    width: 50px;
 }
 
 
@@ -155,25 +164,7 @@ body {
     margin-top: 1rem;
 }
 
-.description-form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-}
 
-.description-form-group textarea {
-    width: 100%;
-    min-height: 150px; /* Adjust based on the expected length of the description */
-    padding: 0.5rem;
-    border: 1px solid #ced4da; /* Default border color */
-    border-radius: 0.25rem; /* Rounded corners */
-    background-color: #f8f9fa; /* Background color to differentiate */
-    resize: vertical; /* Allow vertical resizing only */
-    box-sizing: border-box; /* Ensure padding and border are included in the width */
-    font-size: 1rem; /* Adjust font size as needed */
-    color: #212529; /* Text color */
-    overflow: auto; /* Handle overflow of content */
-}
 
 .product-detail {
     font-size : 1.25rem;

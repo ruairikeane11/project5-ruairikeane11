@@ -83,6 +83,8 @@ The main body of each page is a lightgray to contrast with the darker shade in t
 
 # Wireframes 
 ## Figma 
+- I used [Figma](https://figma.com/) to create wireframe mockups of my site. I played around with different looks and created different designs and layouts for desktop viewing and mobile screen viewing.
+
 ###  Home Page Desktop View
 ![alt text](wireframe1.png)
 
@@ -220,8 +222,6 @@ The main body of each page is a lightgray to contrast with the darker shade in t
 
 ## ER Diagram 
 ![alt text](documentation/er_diagram.png)
-
-
 
 
 # Technologies Used 
